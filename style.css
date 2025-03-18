@@ -3,6 +3,10 @@
     padding:0;
 }
 
+body{
+    background-color: deepskyblue;
+}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -16,11 +20,73 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border:1px solid black;
-    background-color: bisque;
-    height: 900px;
+    border:5px dotted darkblue;
+    background-color: rgb(189, 10, 180);
+    height: 600px;
+    width: 550px;
 }
 
 button{
     padding: 1px;
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+}
+
+.Rock{
+    background-color: red;
+}
+
+.Paper{
+    background-color: blue;
+}
+
+.Scissors{
+    background-color: lime;
+}
+
+.button{
+    background-color: gold;
+}
+
+.button1{
+    background-color: blueviolet;
+}
+
+.clear{
+    border-radius: 0%;
+    position: absolute;
+    top: 600px;
+    right: 250px;
+    background-color: crimson;
+    width: 200px;
+}
+
+.reset{
+    border-radius: 0%;
+    position: absolute;
+    top: 600px;
+    left: 250px;
+    background-color: rgb(231, 85, 0);
+    width:200px;
+}
+
+.player{
+    height: 100px;
+    width: 150px;
+    background-color: #dfd6d6;
+    border-radius: 50%;
+    position: absolute;
+    top: 170px;
+    right: 500px;
+}
+
+.computer{
+    height: 100px;
+    width: 150px;
+    background-color: #ebe1e1;
+    border-radius: 50%;
+    position: absolute;
+    top: 170px;
+    left: 500px;
 }
