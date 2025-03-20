@@ -117,3 +117,16 @@ button{
     position: absolute;
     
 }
+
+.pencil{
+    position: absolute;
+    left:550px;
+}
+
+.water{
+    position: absolute;
+    left:638px;
+}
+.score{
+  left: 810px;
+}
