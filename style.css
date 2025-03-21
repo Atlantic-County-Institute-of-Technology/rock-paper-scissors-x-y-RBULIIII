@@ -57,8 +57,8 @@ button{
 
 .clear{
     border-radius: 0%;
-    position: absolute;
-    top: 600px;
+    position: relative;
+    top: -200px;
     right: 250px;
     background-color: crimson;
     width: 200px;
@@ -67,8 +67,8 @@ button{
 
 .newgame{
     border-radius: 0%;
-    position: absolute;
-    top: 600px;
+    position: relative;
+    top: -200px;
     left: 250px;
     background-color: rgb(231, 85, 0);
     width:200px;
@@ -80,9 +80,9 @@ button{
     width: 150px;
     background-color: #dfd6d6;
     border-radius: 50%;
-    position: absolute;
-    top: 170px;
-    right: 520px;
+    position: relative;
+  
+    /* right: 520px; */
     font-family: fantasy;
     font-size: 30px;
 }
@@ -92,41 +92,61 @@ button{
     width: 150px;
     background-color: #ebe1e1;
     border-radius: 50%;
-    position: absolute;
-    top: 170px;
-    left: 520px;
+    position: relative;
+    /* left: 520px; */
     font-family: fantasy;
     font-size: 30px;
 }
+
+.option {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 200px;
+    
+}
 .versus {
-    position: absolute;
-    top: 175px;
+    position: relative;
+    top: 1165px;
 }
 
 .rock{
-   position: absolute;
+   position: relative;
     right:620px;
 }
 
 .paper{
-    position: absolute;
+    position: relative;
     right:544px;
 }
 
 .scissors{
-    position: absolute;
+    position: relative;
     
 }
 
-.pencil{
-    position: absolute;
-    left:550px;
-}
 
-.water{
-    position: absolute;
-    left:638px;
-}
 .score{
-  left: 810px;
+  /* left: 430px; */
+  position: relative;
+  top: 250px;
+  font-family:sans-serif;
+  font-weight:bolder;
+  font-size: x-large;
 }
+.score1{
+    left: -100px;
+    position: relative;
+    top: 250px;
+    font-family:sans-serif;
+    font-weight:bolder;
+    font-size: x-large;
+  }
+  .score2{
+    left: 150px;
+    position: relative;
+    top: 200px;
+    font-family:sans-serif;
+    font-weight:bolder;
+    font-size: x-large;
+  }

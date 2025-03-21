@@ -1,15 +1,23 @@
-let mouse = new Audio('assests/mouse.mp3');
+const Rock = document.getElementById("Rock")
+const Paper = document.getElementById("Paper")
+const Scissors = document.getElementById("Scissors")
+const button = document.getElementById("button")
+const button1 = document.getElementById("button1")
+let userPick = "";
 
-buttons.addEventListener("click" , annoy);
-
-function annoy (){
-    mouse.play();
+function userChoiceRock() {
+    userPick = 1;
+        alert(userPick)
 }
 
-if {player makes a choice
-rock > paper > scissors}
+Rock.addEventListener("click", userChoiceRock)
 
-Computer chooses random item 
 
-if {player chose rock & computer chose scissors
-player wins}
+// let mouse = new Audio('assests/mouse.mp3');
+
+// buttons.addEventListener("click" , annoy);
+
+// function annoy (){
+//     mouse.play();
+// }
+
