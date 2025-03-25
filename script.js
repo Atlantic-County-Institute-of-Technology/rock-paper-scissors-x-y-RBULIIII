@@ -7,12 +7,17 @@ var userPick = 0;
 
 function userChoiceRock() {
     userPick = 1;
-        alert(userPick)
+    alert(userPick)
+}
+
+function cpuChoice(){
+    opponentchoice = Math.floor(Math.random()* 5) + 1;
+    console.log(opponentchoice)
 }
 
 Rock.addEventListener("click", () => {
     userChoice(1);
-    // cpuChoice()
+    cpuChoice()
     // checkWinner()
 })
 
@@ -25,12 +30,24 @@ function userChoicePaper() {
         alert(userPick)
 }
 
+Paper.addEventListener("click", () => {
+    userChoice(2);
+    cpuChoice()
+    // checkWinner()
+})
+
 Paper.addEventListener("click", userChoicePaper)
 
 function userChoiceScissors() {
     userPick = 3;
         alert(userPick)
 }
+
+Scissors.addEventListener("click", () => {
+    userChoice(3);
+    cpuChoice()
+    //checkWinner()
+})
 
 Scissors.addEventListener("click", userChoiceScissors)
 
@@ -39,6 +56,12 @@ function userChoicebutton() {
         alert(userPick)
 }
 
+button.addEventListener("click", () => {
+    userChoice(4);
+    cpuChoice()
+    // checkWinner()
+})
+
 button.addEventListener("click", userChoicebutton)
 
 function userChoicebutton1() {
@@ -46,13 +69,10 @@ function userChoicebutton1() {
         alert(userPick)
 }
 
+button1.addEventListener("click", () => {
+    userChoice(5);
+    cpuChoice()
+    // checkWinner()
+})
+
 button1.addEventListener("click", userChoicebutton1)
-
-// let mouse = new Audio('assests/mouse.mp3');
-
-// buttons.addEventListener("click" , annoy);
-
-// function annoy (){
-//     mouse.play();
-// }
-
