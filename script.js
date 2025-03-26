@@ -3,6 +3,8 @@ const Paper = document.getElementById("Paper")
 const Scissors = document.getElementById("Scissors")
 const button = document.getElementById("button")
 const button1 = document.getElementById("button1")
+let playerscore = document.getElementById("score1")
+let computerscore = document.getElementById("score2")
 var userPick = 0;
 
 function userChoiceRock() {
@@ -11,14 +13,16 @@ function userChoiceRock() {
 }
 
 function cpuChoice(){
-    opponentchoice = Math.floor(Math.random()* 5) + 1;
+    return Math.floor(Math.random()* 5) + 1;
     console.log(opponentchoice)
 }
 
 Rock.addEventListener("click", () => {
     userChoice(1);
     cpuChoice()
-    // checkWinner()
+    checkWinner()
+    opponentchoice = cpuChoice()
+    
 })
 
 function userChoice(choice) {

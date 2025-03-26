@@ -64,19 +64,8 @@ button:hover{
     border-radius: 0%;
     position: relative;
     top: -200px;
-    right: 250px;
     background-color: crimson;
     width: 200px;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-.newgame{
-    border-radius: 0%;
-    position: relative;
-    top: -200px;
-    left: 250px;
-    background-color: rgb(231, 85, 0);
-    width:200px;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -86,7 +75,6 @@ button:hover{
     background-color: #dfd6d6;
     border-radius: 50%;
     position: relative;
-  
     /* right: 520px; */
     font-family: fantasy;
     font-size: 30px;
