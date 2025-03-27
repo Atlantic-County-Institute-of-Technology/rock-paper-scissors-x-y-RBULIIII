@@ -83,4 +83,122 @@ button1.addEventListener("click", () => {
     // checkWinner()
 })
 
-button1.addEventListener("click", userChoicebutton1)
+function rockcheck(){
+       if(cpuchoice == 1) {
+        result.innerHTML = "It's a draw!"
+       }
+        else if (cpuchoice == 2 ) {
+            result.innerHTML = "Paper Covers Rock, You Lose!";
+            cpuwins++
+            score2.innerHTML = "Computer score: " + cpuwins
+        
+     } else if(cpuchoice == 3) { 
+        result.innerHTML = "Rock Crushes Scissors, You win!"
+        playerwins++;
+        score1.innerHTML = "Player score: " + playerwins
+
+     } else if(cpuchoice == 4) {
+        result.innerHTML = "Rock incinerates pencil, You win!"
+        playerwins++;
+        score1.innerHTML = "Player score: " + playerwins
+     } 
+     else if (cpuchoice == 5) {
+        result.innerHTML = "The rocks durability against the stapler wins you win!"
+        playerwins++;
+        score1.innerHTML = "Player score: " + playerwins
+     }
+}
+
+function papercheck(){
+    if(cpuchoice == 1) {
+        result.innerHTML = "You win!"
+        playerwins++
+        score1.innerHTML = "Player score:" + playerwins
+       }
+        else if (cpuchoice == 2 ) {
+            result.innerHTML = "It is a draw!!";
+        
+     } else if(cpuchoice == 3) { 
+        result.innerHTML = "Scissor cuts paper you LOSE!"
+     } 
+    
+     else if(cpuchoice == 4) {
+        result.innerHTML = "Pencil rips paper you lose!"
+     } 
+     else if (cpuchoice == 5) {
+        result.innerHTML = "Stapler joins them together and doesn't rip them apart you win!"
+        playerwins++
+        score1.innerHTML = "Player score:" + playerwins
+     }
+}
+function scissorscheck(){
+    if (cpuchoice == 1 ) {
+        result.innerHTML = "Rock crushes scissors You lose!";
+     } 
+     else if(cpuchoice == 2) {  
+        result.innerHTML = "scissors cut paper You win!"
+        playerwins++
+        score1.innerHTML = "Player score:" + playerwins
+     } 
+     else if(cpuchoice == 3) {
+        result.innerHTML = "It's a draw!"
+       
+     } else if(cpuchoice == 4) {
+        result.innerHTML = "You slowly cut pencil overtime you win!"
+        playerwins++
+        score1.innerHTML = "Player score:" + playerwins
+     } else if (cpuchoice == 5) {
+        result.innerHTML = "Stapler crushes scissors you lose!"
+        cpuwins++
+        score2.innerHTML = "Computer score: " + cpuwins
+}
+}
+
+function pencilcheck(){
+    if (cpuchoice == 1 ) {
+        result.innerHTML = "Rock incinerates pencil, you lose!";
+        cpuwins++
+        score2.innerHTML = "Computer score: " + cpuwins
+     } 
+     else if(cpuchoice == 2) {  
+        result.innerHTML = "Pencil rips paper you win!"
+        playerwins++
+        score1.innerHTML = "Player score:" + playerwins
+     } 
+     else if(cpuchoice == 3) {
+        result.innerHTML = "Pencil gets cut overtime you lose!"
+        cpuwins++
+        score2.innerHTML = "Computer score: " + cpuwins
+     } else if(cpuchoice == 4) {
+        result.innerHTML = "It is a draw"
+     } else if (cpuchoice == 5) {
+        result.innerHTML = "The pencil wins it jams the stapler you win!"
+        playerwins++
+        score1.innerHTML = "Player score:" + playerwins
+}
+}
+
+function staplercheck(){
+    if (cpuchoice == 1 ) {
+        result.innerHTML = "Rock incinerates pencil, you lose!";
+        cpuwins++
+        score2.innerHTML = "Computer score: " + cpuwins
+     } 
+     else if(cpuchoice == 2) {  
+        result.innerHTML = "Pencil rips paper you win!"
+        playerwins++
+        score1.innerHTML = "Player score:" + playerwins
+     } 
+     else if(cpuchoice == 3) {
+        result.innerHTML = "Pencil gets cut overtime you lose!"
+        cpuwins++
+        score2.innerHTML = "Computer score: " + cpuwins
+     } else if(cpuchoice == 4) {
+        result.innerHTML = "It is a draw"
+     } else if (cpuchoice == 5) {
+        result.innerHTML = "The pencil wins it jams the stapler you win!"
+        playerwins++
+        score1.innerHTML = "Player score:" + playerwins
+}
+}
+
