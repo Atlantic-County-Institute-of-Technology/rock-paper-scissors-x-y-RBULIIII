@@ -35,13 +35,13 @@ function userChoice(choice) {
 
 function userChoicePaper() {
     userPick = 2;
-        alert(userPick)
+    alert(userPick)
 }
 
 Paper.addEventListener("click", () => {
     userChoice(2);
     cpuChoice()
-    // checkWinner()
+    checkWinner()
 })
 
 Paper.addEventListener("click", userChoicePaper)
@@ -54,7 +54,7 @@ function userChoiceScissors() {
 Scissors.addEventListener("click", () => {
     userChoice(3);
     cpuChoice()
-    //checkWinner()
+    checkWinner()
 })
 
 Scissors.addEventListener("click", userChoiceScissors)
@@ -67,7 +67,7 @@ function userChoicebutton() {
 button.addEventListener("click", () => {
     userChoice(4);
     cpuChoice()
-    // checkWinner()
+    checkWinner()
 })
 
 button.addEventListener("click", userChoicebutton)
@@ -80,7 +80,7 @@ function userChoicebutton1() {
 button1.addEventListener("click", () => {
     userChoice(5);
     cpuChoice()
-    // checkWinner()
+    checkWinner()
 })
 
 function rockcheck(){
@@ -185,20 +185,20 @@ function staplercheck(){
         score2.innerHTML = "Computer score: " + cpuwins
      } 
      else if(cpuchoice == 2) {  
-        result.innerHTML = "Pencil rips paper you win!"
-        playerwins++
-        score1.innerHTML = "Player score:" + playerwins
-     } 
-     else if(cpuchoice == 3) {
-        result.innerHTML = "Pencil gets cut overtime you lose!"
+        result.innerHTML = "Stapler joins them together and doesn't rip them apart you lose"
         cpuwins++
         score2.innerHTML = "Computer score: " + cpuwins
+     } 
+     else if(cpuchoice == 3) {
+        result.innerHTML = "Stapler crushes scissors you win!"
+        playerwins++
+        score1.innerHTML = "Player score:" + playerwins
      } else if(cpuchoice == 4) {
         result.innerHTML = "It is a draw"
      } else if (cpuchoice == 5) {
-        result.innerHTML = "The pencil wins it jams the stapler you win!"
-        playerwins++
-        score1.innerHTML = "Player score:" + playerwins
+        result.innerHTML = "The pencil wins it jams the stapler you lose!"
+        cpuwins++
+        score2.innerHTML = "Computer score: " + cpuwins
 }
 }
 
