@@ -21,14 +21,14 @@ function cpuChoice(){
 /*This shows the cpu choice*/
 
 Rock.addEventListener("click", () => {
-    userChoice(1);
+    userChoice();
     cpuChoice()
     checkWinner()
     opponentchoice = cpuChoice()
 })
 
 function userChoice(choice) {
-    userPick = choice;
+    userPick = 1;
 }
 
 /*This is the userchoice function*/
@@ -83,26 +83,26 @@ button1.addEventListener("click", () => {
     checkWinner()
 })
 
-function rockcheck(){
-       if(cpuchoice == 1) {
+function checkWinner(){
+       if(cpuChoice == 1) {
         result.innerHTML = "It's a draw!"
        }
-        else if (cpuchoice == 2 ) {
+        else if (cpuChoice == 2 ) {
             result.innerHTML = "Paper Covers Rock, You Lose!";
             cpuwins++
             score2.innerHTML = "Computer score: " + cpuwins
         
-     } else if(cpuchoice == 3) { 
+     } else if(cpuChoice == 3) { 
         result.innerHTML = "Rock Crushes Scissors, You win!"
         playerwins++;
         score1.innerHTML = "Player score: " + playerwins
 
-     } else if(cpuchoice == 4) {
+     } else if(cpuChoice == 4) {
         result.innerHTML = "Rock incinerates pencil, You win!"
         playerwins++;
         score1.innerHTML = "Player score: " + playerwins
      } 
-     else if (cpuchoice == 5) {
+     else if (cpuChoice == 5) {
         result.innerHTML = "The rocks durability against the stapler wins you win!"
         playerwins++;
         score1.innerHTML = "Player score: " + playerwins
