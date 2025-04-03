@@ -4,27 +4,43 @@ const Scissors = document.getElementById("Scissors")
 /*The const tells the js that there is a document and whatever it is named*/
 const button = document.getElementById("button")
 const button1 = document.getElementById("button1")
+const clear = document.getElementById("CLEAR")
 let playerscore = document.getElementById("score1")
 let computerscore = document.getElementById("score2")
 /*The let links the js to the index*/
 var userPick = 0;
+var cpuwins = 0;
+var playerwins = 0;
+const choices = ['Rock', 'Paper', 'Scissors', 'Pencil', 'Stapler'];
+
+
+
+// clear.addEventListener('click', () => {
+//    console.log("Clear button clicked.");
+//    clear_game();
+// })
+
+function clear_game() {
+   // clears the scores to zero
+   player_score_val = 0;
+   computer_score_val = 0;
+}
+
+function cpuChoice(){
+   return Math.floor(Math.random() * choices.length) + 1;
+}
 
 function userChoiceRock() {
-    userPick = 1;
-    alert(userPick)
+   console.log("Help Me")
+   userPick = 1;
 }
 /*This shows the users choice and option*/
-function cpuChoice(){
-    return Math.floor(Math.random()* 5) + 1;
-    console.log(opponentchoice)
-}
-/*This shows the cpu choice*/
+
 
 Rock.addEventListener("click", () => {
-    userChoice();
-    cpuChoice()
-    checkWinner()
-    opponentchoice = cpuChoice()
+   userChoice();
+   cpuChoice()
+   checkWinner()
 })
 
 function userChoice(choice) {
@@ -35,11 +51,10 @@ function userChoice(choice) {
 
 function userChoicePaper() {
     userPick = 2;
-    alert(userPick)
 }
 
 Paper.addEventListener("click", () => {
-    userChoice(2);
+    userChoice();
     cpuChoice()
     checkWinner()
 })
@@ -48,11 +63,10 @@ Paper.addEventListener("click", userChoicePaper)
 
 function userChoiceScissors() {
     userPick = 3;
-        alert(userPick)
 }
 
 Scissors.addEventListener("click", () => {
-    userChoice(3);
+    userChoice();
     cpuChoice()
     checkWinner()
 })
@@ -61,11 +75,10 @@ Scissors.addEventListener("click", userChoiceScissors)
 
 function userChoicebutton() {
     userPick = 4;
-        alert(userPick)
 }
 
 button.addEventListener("click", () => {
-    userChoice(4);
+    userChoice();
     cpuChoice()
     checkWinner()
 })
@@ -78,13 +91,13 @@ function userChoicebutton1() {
 }
 
 button1.addEventListener("click", () => {
-    userChoice(5);
+    userChoice();
     cpuChoice()
     checkWinner()
 })
 
-function checkWinner(){
-       if(cpuChoice == 1) {
+function checkWinner(userChoice){
+       if(userChoice == 1){
         result.innerHTML = "It's a draw!"
        }
         else if (cpuChoice == 2 ) {
@@ -110,44 +123,44 @@ function checkWinner(){
 }
 
 function papercheck(){
-    if(cpuchoice == 1) {
+    if(cpuChoice == 1) {
         result.innerHTML = "You win!"
         playerwins++
         score1.innerHTML = "Player score:" + playerwins
        }
-        else if (cpuchoice == 2 ) {
+        else if (cpuChoice == 2 ) {
             result.innerHTML = "It is a draw!!";
         
-     } else if(cpuchoice == 3) { 
+     } else if(cpuChoice == 3) { 
         result.innerHTML = "Scissor cuts paper you LOSE!"
      } 
     
-     else if(cpuchoice == 4) {
+     else if(cpuChoice == 4) {
         result.innerHTML = "Pencil rips paper you lose!"
      } 
-     else if (cpuchoice == 5) {
+     else if (cpuChoice == 5) {
         result.innerHTML = "Stapler joins them together and doesn't rip them apart you win!"
         playerwins++
         score1.innerHTML = "Player score:" + playerwins
      }
 }
 function scissorscheck(){
-    if (cpuchoice == 1 ) {
+    if (cpuChoice == 1 ) {
         result.innerHTML = "Rock crushes scissors You lose!";
      } 
-     else if(cpuchoice == 2) {  
+     else if(cpuChoice == 2) {  
         result.innerHTML = "scissors cut paper You win!"
         playerwins++
         score1.innerHTML = "Player score:" + playerwins
      } 
-     else if(cpuchoice == 3) {
+     else if(cpuChoice == 3) {
         result.innerHTML = "It's a draw!"
        
-     } else if(cpuchoice == 4) {
+     } else if(cpuChoice == 4) {
         result.innerHTML = "You slowly cut pencil overtime you win!"
         playerwins++
         score1.innerHTML = "Player score:" + playerwins
-     } else if (cpuchoice == 5) {
+     } else if (cpuChoice == 5) {
         result.innerHTML = "Stapler crushes scissors you lose!"
         cpuwins++
         score2.innerHTML = "Computer score: " + cpuwins
@@ -155,23 +168,23 @@ function scissorscheck(){
 }
 
 function pencilcheck(){
-    if (cpuchoice == 1 ) {
+    if (cpuChoice == 1 ) {
         result.innerHTML = "Rock incinerates pencil, you lose!";
         cpuwins++
         score2.innerHTML = "Computer score: " + cpuwins
      } 
-     else if(cpuchoice == 2) {  
+     else if(cpuChoice == 2) {  
         result.innerHTML = "Pencil rips paper you win!"
         playerwins++
         score1.innerHTML = "Player score:" + playerwins
      } 
-     else if(cpuchoice == 3) {
+     else if(cpuChoice == 3) {
         result.innerHTML = "Pencil gets cut overtime you lose!"
         cpuwins++
         score2.innerHTML = "Computer score: " + cpuwins
-     } else if(cpuchoice == 4) {
+     } else if(cpuChoice == 4) {
         result.innerHTML = "It is a draw"
-     } else if (cpuchoice == 5) {
+     } else if (cpuChoice == 5) {
         result.innerHTML = "The pencil wins it jams the stapler you win!"
         playerwins++
         score1.innerHTML = "Player score:" + playerwins
@@ -179,26 +192,27 @@ function pencilcheck(){
 }
 
 function staplercheck(){
-    if (cpuchoice == 1 ) {
+    if (cpuChoice == 1 ) {
         result.innerHTML = "Rock incinerates pencil, you lose!";
         cpuwins++
         score2.innerHTML = "Computer score: " + cpuwins
      } 
-     else if(cpuchoice == 2) {  
+     else if(cpuChoice == 2) {  
         result.innerHTML = "Stapler joins them together and doesn't rip them apart you lose"
         cpuwins++
         score2.innerHTML = "Computer score: " + cpuwins
      } 
-     else if(cpuchoice == 3) {
+     else if(cpuChoice == 3) {
         result.innerHTML = "Stapler crushes scissors you win!"
         playerwins++
         score1.innerHTML = "Player score:" + playerwins
-     } else if(cpuchoice == 4) {
+     } else if(cpuChoice == 4) {
         result.innerHTML = "It is a draw"
-     } else if (cpuchoice == 5) {
+     } else if (cpuChoice == 5) {
         result.innerHTML = "The pencil wins it jams the stapler you lose!"
         cpuwins++
         score2.innerHTML = "Computer score: " + cpuwins
 }
+
 }
 
