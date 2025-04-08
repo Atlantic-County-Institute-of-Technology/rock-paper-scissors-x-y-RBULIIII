@@ -9,6 +9,7 @@ let playerscore = document.getElementById("score1")
 let computerscore = document.getElementById("score2")
 /*The let links the js to the index*/
 var userPick = 0;
+var cpuPick = 0;
 var cpuwins = 0;
 var playerwins = 0;
 const choices = ['Rock', 'Paper', 'Scissors', 'Pencil', 'Stapler'];
@@ -27,7 +28,8 @@ function clear_game() {
 }
 
 function cpuChoice(){
-   return Math.floor(Math.random() * choices.length) + 1;
+   // cpuPick =  Math.floor(Math.random() * choices.length) + 1;
+   cpuPick = Math.floor(Math.random() * 3) + 1;
 }
 
 function userChoiceRock() {
@@ -41,11 +43,13 @@ Rock.addEventListener("click", () => {
    userChoice();
    cpuChoice()
    checkWinner()
+   console.log
+   
 })
 
 function userChoice(choice) {
     userPick = 1;
-}
+    }
 
 /*This is the userchoice function*/
 
@@ -97,7 +101,7 @@ button1.addEventListener("click", () => {
 })
 
 function checkWinner(userChoice){
-       if(userChoice == 1){
+       if(userChoice == 1  && cpuPick == 1){
         result.innerHTML = "It's a draw!"
        }
         else if (cpuChoice == 2 ) {
@@ -213,6 +217,5 @@ function staplercheck(){
         cpuwins++
         score2.innerHTML = "Computer score: " + cpuwins
 }
-
 }
 
